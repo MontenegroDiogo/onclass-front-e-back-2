@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/docenteAdm.css">
+  <title>ONCLASS - Administrador</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <h2 class="logo">ONCLASS</h2>
+      <ul class="menu">
+        <li>
+          <img src="../img/Home.png" alt="Home">
+          <a href="../telas/homeAdmin.html">Tela Inicial</a>
+        </li>
+        <li>
+          <img src="../img/Admin Settings Male.png" alt="Administrador">
+          <a href="../telas/admin.html">Administrador</a>
+        </li>
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/docenteAdm.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Student Male.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Discente</a>
+        </li>
+        <li>
+          <img src="../img/educacao.png" alt="">
+          <a href="../telas/cursosAdm.html">Cursos</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <main class="main-content">
+      <header class="header">
+        <h1>ADMINISTRADOR</h1>
+      </header>
+      
+      <div class="textoBotao">
+        <h2>Docente
+          <h3>Cadastre novos professores</h3>
+        </h2>
+        
+      </div>
+      <!-- Botão para adicionar professor -->
+      <div class="actions">
+        <button id="btn-add-professor" class="btn-primary">Adicionar Professor</button>
+      </div>
+
+      <!-- Modal de cadastro de professor -->
+      <div id="modal-professor" class="modal">
+        <div class="modal-content">
+          <span class="close-modal" id="close-modal">&times;</span>
+
+          <h2>Cadastrar Professor</h2>
+
+          <form id="form-professor">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="matricula">Matricula</label>
+            <input type="text" id="matricula" name="matricula" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="curso">Curso</label>
+            <input type="text" id="curso" name="curso" required>
+
+            <label for="turma">Turma</label>
+            <input type="text" id="turma" name="turma" required>
+
+            <label for="turno">Turno</label>
+            <input type="text" id="turno" name="turno" required>
+
+            <label for="senha">Senha</label>
+            <input type="text" id="senha" name="senha" required>
+
+            <button id="salvar-professor" class="btn-primary">salvar</button>
+          </form>
+        </div>
+      </div>
+
+       <!-- Cards Informativos -->
+        <div class="cards">
+          <div class="card">
+            <img src="../img/Administrator Male.png" alt="professor">
+            <h3>45</h3>
+            <p>Docentes Ativos</p>
+          </div>
+    </main>
+  </div>
+
+ <section class="alunos-recentes">
+  <h2>Docentes Recém-Cadastrados</h2>
+  <ul>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+    <li> Nome:Maria Roberta Silva <br>Matrícula: 01212346  </li>
+  </ul>
+</section>
+
+      <script src="../js/docenteAdm.js"></script>
+</body>

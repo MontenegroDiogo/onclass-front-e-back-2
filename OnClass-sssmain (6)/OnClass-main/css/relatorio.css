@@ -1,0 +1,190 @@
+/* ===== Layout Geral ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Barra Lateral ===== */
+.sidebar {
+  width: 220px;
+  background-color: #00257c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  font-size: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+  padding-left: 20px;
+}
+
+.menu li img {
+  width: 22px;
+  height: 22px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.logout img {
+  width: 30px;
+  height: 30px;
+}
+
+.logout a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== Área Principal ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0;
+}
+
+/* Barra Superior */
+.header {
+  background-color: #00257c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filters select, .filters button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+/* ===== Relatório de Presença ===== */
+.relatorio {
+  position: relative;
+  width: 500px;
+  margin: 40px auto; /* centraliza horizontalmente */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  overflow-y: auto; /* permite rolagem vertical se precisar */
+  overflow-x: hidden; /* remove barra horizontal */
+}
+
+.relatorio h2 {
+  font-size: 20px;
+  color: #00257c;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #00257c;
+  padding-bottom: 10px;
+}
+
+/* cada coluna = bloco do tipo de presença */
+.coluna {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* efeito hover igual à lista de alunos */
+.coluna:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.coluna h3 {
+  color: #00257c;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.coluna ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.coluna ul li {
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* botão manter, mas no mesmo estilo */
+.btn {
+  background-color: #00257c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #001f63;
+}
+

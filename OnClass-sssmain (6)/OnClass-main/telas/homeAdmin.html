@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Administrador</title>
+  <link rel="stylesheet" href="../css/homeAdmin.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>ONCLASS</h2>
+      </div>
+      <ul class="menu">
+        <li>
+          <img src="../img/Home.png" alt="Home">
+          <a href="homeAdmin.html">Tela Inicial</a>
+        </li>
+        <li>
+          <img src="../img/Admin Settings Male.png" alt="Administrador">
+          <a href="admin.html">Administrador</a>
+        </li>
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/docenteAdm.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Student Male.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Discente</a>
+        </li>
+        <li>
+          <img src="../img/educacao.png" alt="">
+          <a href="../telas/cursosAdm.html">Cursos</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html" id="logoutBtn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <!-- Barra Superior -->
+      <header class="header">
+        <h1>ADMINISTRADOR</h1>
+      </header>
+
+      <!-- Conteúdo Principal -->
+      <section class="dashboard">
+        <h2 class="welcome-title">Bem-vindo, Administrador</h2>
+        <p class="subtitle">Gerencie e acompanhe as informações da instituição em um só lugar.</p>
+
+        <!-- Cards Informativos -->
+        <div class="cards">
+          <div class="card">
+            <img src="../img/Student Male.png" alt="Alunos">
+            <h3>1.230</h3>
+            <p>Alunos Cadastrados</p>
+          </div>
+          <div class="card">
+            <img src="../img/Administrator Male.png" alt="Docentes">
+            <h3>45</h3>
+            <p>Docentes Ativos</p>
+          </div>
+          <div class="card">
+            <img src="../img/Document.png" alt="Cursos">
+            <h3>12</h3>
+            <p>Cursos em Andamento</p>
+          </div>
+        </div>
+
+        <!-- Notificações Recentes -->
+        <div class="notifications">
+          <h2>Notificações Recentes</h2>
+          <ul>
+            <li>Novo curso "Engenharia de Software" adicionado</li>
+            <li>Professor João foi cadastrado no sistema</li>
+            <li>20 alunos aprovados na última avaliação</li>
+            <li>Atualização do sistema concluída com sucesso</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/home.js"></script>
+</body>
+</html>

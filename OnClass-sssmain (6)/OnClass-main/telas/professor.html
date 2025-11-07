@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Administrador</title>
+  <link rel="stylesheet" href="../css/professor.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>ONCLASS</h2>
+      </div>
+
+      <ul class="menu">
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/professor.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Document.png" alt="Discente">
+          <a href="../telas/relatorio.html">Relatorio de presença</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html" id="logoutBtn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <!-- Barra Superior -->
+      <header class="header">
+        <h1>Docente</h1>
+      </header>
+
+      <!-- Filtros -->
+      <div class="filters">
+        <select id="select-curso">
+          <option value="">CURSO</option>
+        </select>
+        <select id="select-turno">
+          <option value="">TURNO</option>
+        </select>
+        <select id="select-semestre">
+          <option value="">SEMESTRE</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="btn-add-justificativa" class="btn-primary">Justifique Faltas</button>
+      </div>
+
+      <!-- Modal justificar faltas -->
+      <div id="modal-justificativa" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close-modal" id="fechar-modal-justificativa">&times;</span>
+
+          <form id="form-justificativa">
+            <label for="nome">Nome do aluno</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="data">Data da falta</label>
+            <input type="date" name="data" id="data" required>
+
+            <label for="motivo">Motivo</label>
+            <textarea name="motivo" id="motivo" placeholder="Descreva o motivo..." required></textarea>
+
+            <label for="anexo">Anexar Documento</label>
+            <input type="file" id="anexo" name="anexo" accept=".png,.jpg,.pdf">
+
+            <button id="salvar-justificativa" class="btn-primary" type="button">Enviar Justificativa</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal QRCode -->
+      <div id="modal-qrcode" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close-modal" id="close-modal">&times;</span>
+
+          <h2>QR Code da Aula</h2>
+          <div id="infoAula"></div>
+
+          <!-- ÚNICO contêiner de QR (combina com o teu JS) -->
+          <div id="qrcode" style="display:flex; justify-content:center; margin:20px 0;"></div>
+
+          <button id="baixarBtn" class="btn-primary" type="button">Baixar QR Code</button>
+        </div>
+      </div>
+
+      <!-- Quadro de horários -->
+      <div class="quadro-horarios">
+        <h2>Quadro de Horários</h2>
+        <table id="tabelaHorarios">
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Horário</th>
+              <th>Curso</th>
+              <th>Disciplina</th>
+              <th>Turma</th>
+              <th>Professor</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- Lib do QRCode (DEVE vir antes do professor.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <!-- Seu JS -->
+  <script src="../js/professor.js"></script>
+</body>
+</html>
