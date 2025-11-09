@@ -322,3 +322,30 @@ body {
   margin-left: 85px;
   margin-right: 50px;
 }
+.link-curso {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.link-curso:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.btn-amarelo{
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-vermelho{
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
