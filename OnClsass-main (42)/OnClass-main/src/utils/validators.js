@@ -42,7 +42,7 @@ export async function obrigatoriosProfessor(data) {
 }
 
 export async function obrigatoriosDisciplina(data) {
-    const obrigatorios = ["codigo", "nome", "descricao", "matricula"];
+    const obrigatorios = ["codigo", "nome", "matricula"];
     for (const campo of obrigatorios) {
         if (!data[campo]) {
             throw new Error(`O campo ${campo} é obrigatório`);

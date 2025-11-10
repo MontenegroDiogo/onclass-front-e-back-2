@@ -38,3 +38,12 @@ export const editarProfessor = async (req, res) => {
         return res.status(400).json({ error: error.message });
     }
 };
+
+export const logarProfessor = async (req, res) => {
+    try {
+        const professor = await service.logarProfessor(req.body);
+        return res.status(200).json(professor);
+    } catch (error) {
+        return res.status(400).json({ error: error.message });
+    }
+};

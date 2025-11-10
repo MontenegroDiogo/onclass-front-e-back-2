@@ -42,3 +42,16 @@ export const editarProfessor = async (matricula, data) => {
     await professor.update(data);
     return professor;
 };
+
+export const logarProfessor = async (data) => {
+        const professor = await Professor.findOne({
+            where: {
+                matricula: { [Op.like]: data.matricula },
+                senhaHASH: { [Op.like]: data.senhaHASH }
+            }
+        });
+        if (!professor) {
+            throw new Error("Matricula ou senha inválidos");
+        }
+        return professor;
+    };

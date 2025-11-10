@@ -1,7 +1,6 @@
 // models/Disciplina.js
 import { DataTypes } from "sequelize";
 import { sequelize } from "../Config/configDB.js";
-import Professor from "./Professor.js"; 
 
 const Disciplina = sequelize.define("Disciplina", {
   id: {
@@ -32,18 +31,6 @@ const Disciplina = sequelize.define("Disciplina", {
   }
 }, {
   tableName: "Disciplinas"
-});
-
-
-Disciplina.belongsTo(Professor, {
-  foreignKey: "matricula",
-  as: "professor"
-});
-
-
-Professor.hasMany(Disciplina, {
-  foreignKey: "matricula",
-  as: "disciplinas"
 });
 
 export default Disciplina;

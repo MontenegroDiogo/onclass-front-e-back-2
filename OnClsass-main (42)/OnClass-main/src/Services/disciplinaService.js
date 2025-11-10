@@ -1,6 +1,5 @@
-import Disciplina from "../Models/Disciplina.js";
+import { Disciplina, Professor } from "../Models/index.js";
 import * as Validator from "../utils/validators.js";
-import Professor from "../Models/Professor.js";
 import { Op } from "sequelize";
 
 export const criarDisciplina = async (data) => {

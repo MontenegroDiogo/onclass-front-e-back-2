@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { sequelize } from "./Config/configDB.js";
 import routes from "./Routes/index.js";
+import './Models/index.js';
 
 dotenv.config();
 

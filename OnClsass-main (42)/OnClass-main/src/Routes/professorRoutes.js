@@ -7,5 +7,6 @@ professorRoutes.post("/", professorController.criarProfessor);
 professorRoutes.get("/", professorController.listarProfessores);
 professorRoutes.get("/buscar", professorController.buscarProfessor);
 professorRoutes.patch("/:matricula", professorController.editarProfessor);
+professorRoutes.post("/login", professorController.logarProfessor);
 
 export default professorRoutes;
