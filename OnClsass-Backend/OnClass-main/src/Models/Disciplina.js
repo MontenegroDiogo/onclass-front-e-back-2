@@ -1,8 +1,7 @@
-// models/Disciplina.js
 import { DataTypes } from "sequelize";
 import { sequelize } from "../Config/configDB.js";
 
-const Curso = sequelize.define("Curso", {
+const Disciplina = sequelize.define("Disciplina", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -19,14 +18,23 @@ const Curso = sequelize.define("Curso", {
   },
   cargaHoraria: {
     type: DataTypes.INTEGER,
-    allowNull: true
+    allowNull: false
   },
-  semestre: {
-    type: DataTypes.DOUBLE,
-    allowNull: true 
+  horarioInicio: {
+    type: DataTypes.TIME,
+    allowNull: false
+  },
+  horarioFim: {
+    type: DataTypes.TIME,
+    allowNull: false
+  },
+  diaSemana: {
+    type: DataTypes.STRING(20),
+    allowNull: false,
+    comment: "Ex: segunda, terca, quarta, quinta, sexta"
   }
 }, {
-  tableName: "Cursos"
+  tableName: "Disciplinas"
 });
 
-export default Curso;
+export default Disciplina;
