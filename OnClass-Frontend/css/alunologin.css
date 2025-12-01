@@ -126,48 +126,49 @@ body {
 }
 
 /* 📱 Responsividade */
-@media (max-width: 500px) {
-  body {
-    background-color: #f0f5ff;
-    padding: 20px;
-  }
+@media (max-width: 300px) {
+    body {
+        background-color: #f0f5ff;
+        padding: 10px; 
+    }
 
-  .login-container {
-    width: 100%;
-    max-width: 360px;
-    padding: 30px 25px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  }
+    .login-container {
+        width: 100%;
+        max-width: 220px; 
+        padding: 15px; 
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        margin: 0 auto;
+    }
 
-  .login-container h2 {
-    font-size: 20px;
-  }
+    .login-container h2 {
+        font-size: 16px; 
+    }
 
-  .login-container input {
-    font-size: 16px;
-    padding: 12px;
-  }
+    .login-container input {
+        font-size: 13px; 
+        padding: 8px; 
+    }
 
-  .login-container button {
-    font-size: 16px;
-    padding: 12px;
-  }
+    .login-container button {
+        font-size: 14px; 
+        padding: 10px; 
+    }
 
-  .popup-conteudo {
-    width: 90%;
-    padding: 25px 20px;
-  }
+    .popup-conteudo {
+        width: 90%;
+        padding: 25px 20px;
+    }
 
-  .popup-conteudo h3 {
-    font-size: 17px;
-  }
+    .popup-conteudo h3 {
+        font-size: 17px;
+    }
 
-  .popup-conteudo p {
-    font-size: 15px;
-  }
+    .popup-conteudo p {
+        font-size: 15px;
+    }
 
-  .popup-conteudo img {
-    width: 60px;
-    height: 60px;
-  }
+    .popup-conteudo img {
+        width: 60px;
+        height: 60px;
+    }
 }
