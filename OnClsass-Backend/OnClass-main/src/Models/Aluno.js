@@ -31,7 +31,6 @@ const Aluno = sequelize.define("Aluno", {
         type: DataTypes.STRING,
         allowNull: false
     }
-
 });
 
 export default Aluno;

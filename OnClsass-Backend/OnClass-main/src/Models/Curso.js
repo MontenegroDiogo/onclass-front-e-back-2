@@ -2,7 +2,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../Config/configDB.js";
 
-const Disciplina = sequelize.define("Disciplina", {
+const Curso = sequelize.define("Curso", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -22,15 +22,15 @@ const Disciplina = sequelize.define("Disciplina", {
     allowNull: true
   },
   semestre: {
-    type: DataTypes.STRING(20),
+    type: DataTypes.DOUBLE,
     allowNull: true 
   },
-  ativa: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: true
+  disciplinas: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
 }, {
-  tableName: "Disciplinas"
+  tableName: "Cursos"
 });
 
-export default Disciplina;
+export default Curso;
