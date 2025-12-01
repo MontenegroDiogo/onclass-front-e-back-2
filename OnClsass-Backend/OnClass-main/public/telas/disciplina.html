@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/disciplina.css">
+  <title>ONCLASS - Disciplinas</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <h2 class="logo">ONCLASS</h2>
+      <ul class="menu">
+        <li>
+          <img src="../img/Home.png" alt="Home">
+          <a href="../telas/homeAdmin.html">Tela Inicial</a>
+        </li>
+        <li>
+          <img src="../img/Admin Settings Male.png" alt="Administrador">
+          <a href="../telas/admin.html">Administrador</a>
+        </li>
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/docenteAdm.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Student Male.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Discente</a>
+        </li>
+        <li>
+          <img src="../img/educacao.png" alt="Cursos">
+          <a href="../telas/cursosAdm.html">Cursos</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <main class="main-content">
+      <header class="header">
+        <h1>ADMINISTRADOR</h1>
+      </header>
+
+      <a href="../telas/cursosAdm.html" class="btn-primary">
+        <img src="../img/angulo-duplo-pequeno-direito.png" alt="voltar">
+      </a>
+
+      <!-- Conteúdo: Tabela de Disciplinas -->
+      <section class="quadro-horarios">
+        <h2>Disciplinas - <span id="nomeCurso"></span></h2>
+
+        <button id="abrirModal" class="btn-azul">+ Adicionar Disciplina</button>
+
+        <table id="tabelaDisciplinas">
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>Docente Responsável</th>
+              <th>Dia da Semana</th>
+              <th>Horário</th>
+              <th>Curso</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas adicionadas dinamicamente via JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="fechar" id="fecharModal">&times;</span>
+      <h3 id="tituloModal">Adicionar Disciplina</h3>
+
+      <form id="formDisciplina">
+        <label for="disciplina">Nome da Disciplina:</label>
+        <input type="text" id="disciplina" name="disciplina" required>
+
+        <label for="docente">Docente Responsável:</label>
+        <input type="text" id="docente" name="docente" required>
+
+        <label for="dia">Dia da Semana:</label>
+        <input type="text" id="dia" name="dia">
+
+        <label for="horario">Horário:</label>
+        <input type="text" id="horario" name="horario" placeholder="Ex: 08:00 às 10:00">
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" readonly>
+
+        <button type="submit" id="salvar">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/disciplina.js"></script>
+</body>
+</html>

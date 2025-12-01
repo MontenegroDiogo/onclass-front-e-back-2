@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/cursosAdm.css">
+  <title>ONCLASS - Administrador</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <h2 class="logo">ONCLASS</h2>
+      <ul class="menu">
+        <li>
+          <img src="../img/Home.png" alt="Home">
+          <a href="../telas/homeAdmin.html">Tela Inicial</a>
+        </li>
+        <li>
+          <img src="../img/Admin Settings Male.png" alt="Administrador">
+          <a href="../telas/admin.html">Administrador</a>
+        </li>
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/docenteAdm.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Student Male.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Discente</a>
+        </li>
+        <li>
+          <img src="../img/educacao.png" alt="Cursos">
+          <a href="../telas/cursosAdm.html">Cursos</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <main class="main-content">
+      <header class="header">
+        <h1>ADMINISTRADOR</h1>
+      </header>
+    
+      <!-- Filtros -->
+      <div class="filters">
+        <select id="select-docente">
+          <option value="">DOCENTE</option>
+        </select>
+        <select id="select-curso">
+          <option value="">CURSO</option>
+        </select>
+        <select id="select-turno">
+          <option value="">TURNO</option>
+        </select>
+        <select id="select-semestre">
+          <option value="">SEMESTRE</option>
+        </select>
+        <button id="btn-filtrar">Filtrar</button>
+      </div>
+    
+
+    <div class="container-conteudo">
+  <h2 class="titulo">Gerenciar Cursos</h2>
+
+  <button id="adicionarCurso" class="btn-azul">Adicionar Curso</button>
+
+  <table class="tabela-cursos">
+    <thead>
+      <tr>
+        <th>Nome do Curso</th>
+        <th>Código</th>
+        <th>Turno</th>
+        <th>Semestre</th>
+        <th>Docente</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaCursosBody">
+      <!-- cursos serão carregados dinamicamente -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal de Edição -->
+<div id="modalEditarCurso" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar">&times;</span>
+    <h3>Editar Curso</h3>
+    <form id="formEditarCurso">
+      <label>Nome:</label>
+      <input type="text" id="editarNome" required />
+
+      <label>Código:</label>
+      <input type="text" id="editarCodigo" required />
+
+      <label>Turno:</label>
+      <input type="text" id="editarTurno" required>
+
+      <label>Semestre:</label>
+      <input type="number" id="editarSemestre" min="1" max="10" required />
+
+      <label>Docente</label>
+      <input type="text" id="editarDocente" required>
+
+      <button type="submit" class="btn-azul">Salvar Alterações</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de Adição de Curso -->
+<div id="modalAdicionarCurso" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar">&times;</span>
+    <h3>Adicionar Curso</h3>
+    <form id="formAdicionarCurso">
+      <label>Nome:</label>
+      <input type="text" id="novoNome" required />
+
+      <label>Código:</label>
+      <input type="text" id="novoCodigo" required />
+
+      <label>Turno:</label>
+      <input type="text" id="novoTurno" required />
+
+      <label>Semestre:</label>
+      <input type="number" id="novoSemestre" min="1" max="10" required />
+
+      <label>Docente:</label>
+      <input type="text" id="novoDocente" required />
+
+      <button type="submit" class="btn-azul">Salvar Curso</button>
+    </form>
+  </div>
+</div>
+
+<script src="../js/cursosAdm.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login do Estudante</title>
+  <link rel="stylesheet" href="../css/alunologin.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login do Estudante</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="verificarLogin()">Confirmar Presença</button>
+  </div>
+
+  <!-- Pop-up -->
+  <div class="popup" id="popup">
+    <div class="popup-conteudo" id="popupConteudo">
+      <img id="popupIcone" alt="Ícone de status">
+      <h3></h3>
+      <p></p>
+      <button onclick="fecharPopup()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="../js/alunologin.js"></script>
+
+   <!-- edição do gpt 06/11 -->
+
+   <script>
+  // Lê os dados que vieram no QR (querystring)
+  const q = new URLSearchParams(location.search);
+  const aulaInfo = {
+    dia: q.get("dia"),
+    horario: q.get("horario"),
+    curso: q.get("curso"),
+    turma: q.get("turma"),
+    prof: q.get("prof"),
+    ts: q.get("ts"),
+  };
+
+  // Guarda para usar após o login (ex.: enviar junto pro backend)
+  sessionStorage.setItem("aulaInfo", JSON.stringify(aulaInfo));
+
+  // (Opcional) Exibir um resumo para o aluno
+  // const resumo = document.createElement("p");
+  // resumo.textContent = `Você está registrando presença na aula de ${aulaInfo.curso} - ${aulaInfo.turma} (${aulaInfo.dia}, ${aulaInfo.horario})`;
+  // document.querySelector(".card")?.appendChild(resumo);
+</script>
+
+
+   
+
+</body>
+</html>

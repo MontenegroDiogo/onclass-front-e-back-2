@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/home.css">
+  <title>OnClass</title>
+</head>
+
+<body>
+  <div class="background-blue">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="../telas/home.html">OnClass</a>
+            <ul class="ul">
+              <li> <a href="#"> <button class="botao">Home</button> </a></li>
+              <li> <a href="#"> <button id="btnAdmin" class="botao">Administrador</button> </a></li>
+              <li> <a href="#"> <button id="btnDocente" class="botao">Docente</button> </a></li>
+
+              <!-- Modal Administrador -->
+              <div id="modalAdmin" class="modal">
+                <div class="modal-content">
+                  <span class="close" data-close="modalAdmin">&times;</span>
+                  <h2>Login do Administrador</h2>
+                  <form id="formAdmin">
+                    <label for="matriculaAdmin">Matrícula</label>
+                    <input type="text" id="matriculaAdmin" placeholder="Digite sua matrícula" required>
+
+                    <label for="senhaAdmin">Senha</label>
+                    <div class="input-senha">
+                      <input type="password" id="senhaAdmin" placeholder="Digite sua senha" required>
+                      <button type="button" class="toggle-senha" data-input="senhaAdmin">
+                        <img src="../img/fechado.png" alt="Mostrar senha">
+                      </button>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Entrar</button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Modal Docente -->
+              <div id="modalDocente" class="modal">
+                <div class="modal-content">
+                  <span class="close" data-close="modalDocente">&times;</span>
+                  <h2>Login do Docente</h2>
+                  <form id="formDocente">
+                    <label for="matriculaDocente">Matrícula</label>
+                    <input type="text" id="matriculaDocente" placeholder="Digite sua matrícula" required>
+
+                    <label for="senhaDocente">Senha</label>
+                    <div class="input-senha">
+                      <input type="password" id="senhaDocente" placeholder="Digite sua senha" required>
+                      <button type="button" class="toggle-senha" data-input="senhaDocente">
+                        <img src="../img/fechado.png" alt="Mostrar senha">
+                      </button>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Entrar</button>
+                  </form>
+                </div>
+              </div>
+
+
+
+              <div class="menu-icon">
+                <img src="" alt="">
+              </div>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  </div>
+  <!--main text-->
+  <main>
+    <section class="hero">
+      <!-- hero texto-->
+      <div class="hero-text">
+        <h2>"Registre, organize e <br>compartilhe suas atas de forma rápida, segura e totalmente <br>online."</h2>
+      </div>
+      <!--hero imagem-->
+      <div class="hero-image">
+        <img src="../img/young man in headset using computer.png" alt="Professor">
+      </div>
+  </main>
+  <!--Fim main text-->
+
+  <!--inicio Cards-->
+  <section class="cards-section">
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="../img/Qr Code.png" alt="QR CODE">
+          </div>
+          <h3>QR CODE</h3>
+          <p>Garanta praticidade e segurança no registro dos alunos.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="../img/Worldwide Location.png" alt="Geolocalização">
+          </div>
+          <h3>GEOLOCALIZAÇÃO</h3>
+          <p>Aumente a confiabilidade do processo.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img src="../img/Document.png" alt="PDF">
+          </div>
+          <h3>PDFs</h3>
+          <p>Padronização e facilidade de compartilhamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../js/home.js"></script>
+</body>
+
+</html>

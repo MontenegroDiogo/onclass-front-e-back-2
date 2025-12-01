@@ -1,0 +1,281 @@
+/* ======= Layout Geral ======= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ======= Barra Lateral ======= */
+.sidebar {
+  width: 220px;
+  background-color: #00257c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.menu img {
+  width: 22px;
+  height: 22px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.logout img {
+  width: 30px;
+  height: 30px;
+}
+
+.logout a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ======= Área Principal ======= */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #00257c;
+  color: #fff;
+  padding: 0px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.header h1{
+  margin: 0;
+  font-size: 20px;
+}
+/* ======= Quadro de Disciplinas ======= */
+.quadro-horarios {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 20px;
+}
+
+.quadro-horarios h2 {
+  text-align: center;
+  color: #00257c;
+  margin-bottom: 20px;
+}
+
+/* ======= Botão Adicionar ======= */
+.btn-azul {
+  background-color: #00257c;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-azul:hover {
+  background-color: #0143a1;
+}
+
+/* ======= Tabela ======= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead {
+  background-color: #00257c;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* ======= Botões de Ação ======= */
+.acao {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.acao.editar {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.acao.remover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.acao:hover {
+  opacity: 0.8;
+}
+
+/* ======= Modal ======= */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #00257c;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #00257c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0143a1;
+}
+
+/* Botão Fechar */
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.fechar:hover {
+  color: #000;
+}
+
+.btn-primary {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-primary img {
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-primary img:hover {
+  transform: scale(1.1);
+}
+
+.editar{
+  background-color: #f1c40f;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.remover{
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/admin.css">
+  <title>ONCLASS - Administrador</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <h2 class="logo">ONCLASS</h2>
+      <ul class="menu">
+        <li>
+          <img src="../img/Home.png" alt="Home">
+          <a href="../telas/homeAdmin.html">Tela Inicial</a>
+        </li>
+        <li>
+          <img src="../img/Admin Settings Male.png" alt="Administrador">
+          <a href="../telas/admin.html">Administrador</a>
+        </li>
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/docenteAdm.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Student Male.png" alt="Discente">
+          <a href="../telas/discenteAdm.html">Discente</a>
+        </li>
+        <li>
+          <img src="../img/educacao.png" alt="">
+          <a href="../telas/cursosAdm.html">Cursos</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <main class="main-content">
+      <header class="header">
+        <h1>ADMINISTRADOR</h1>
+      </header>
+
+      <!-- Filtros -->
+      <div class="filters">
+        <select id="select-docente">
+          <option value="">DOCENTE</option>
+        </select>
+        <select id="select-curso">
+          <option value="">CURSO</option>
+        </select>
+        <select id="select-turno">
+          <option value="">TURNO</option>
+        </select>
+        <select id="select-semestre">
+          <option value="">SEMESTRE</option>
+        </select>
+        <button id="btn-filtrar">Filtrar</button>
+      </div>
+
+<div class="quadro-horarios">
+  <h2>Quadro de Horários</h2>
+
+  <table id="tabelaHorarios">
+    <thead>
+      <tr>
+        <th>Dia</th>
+        <th>Horário</th>
+        <th>Curso</th>
+        <th>Turma</th>
+        <th>Professor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button id="abrirModal">Adicionar Horário</button>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="fechar">&times;</span>
+    <h3 id="modalTitulo">Adicionar Horário</h3>
+
+    <form id="formHorario">
+      <label>Dia</label>
+      <input type="text" id="dia" required>
+
+      <label>Horário</label>
+      <input type="text" id="horario" required>
+
+      <label>Curso</label>
+      <input type="text" id="curso" required>
+
+      <label>Turma</label>
+      <input type="text" id="turma" required>
+
+      <label>Professor</label>
+      <input type="text" id="professor" required>
+
+      <button type="submit" id="salvarHorario">Salvar</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Modal de cadastro de curso -->
+  <div id="modal-curso" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal-curso">&times;</span>
+      <h2>Cadastrar Curso</h2>
+      <form id="form-curso">
+        <label for="nome-curso">Nome do Curso:</label>
+        <input type="text" id="nome-curso" name="nome-curso" required>
+
+        <label for="codigo-curso">Código do Curso:</label>
+        <input type="text" id="codigo-curso" name="codigo-curso" required>
+
+        <label for="descricao-curso">Descrição:</label>
+        <textarea id="descricao-curso" name="descricao-curso" required></textarea>
+
+        <button type="submit" class="btn-primary">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

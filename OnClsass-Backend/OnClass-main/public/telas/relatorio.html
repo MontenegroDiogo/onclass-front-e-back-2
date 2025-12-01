@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONCLASS - Professor</title>
+  <link rel="stylesheet" href="../css/relatorio.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>ONCLASS</h2>
+      </div>
+    
+
+      <ul class="menu">
+        <li>
+          <img src="../img/Administrator Male.png" alt="Docente">
+          <a href="../telas/professor.html">Docente</a>
+        </li>
+        <li>
+          <img src="../img/Document.png" alt="Relatorio">
+          <a href="../telas/relatorio.html">Relatorio de presença</a>
+        </li>
+      </ul>
+      <div class="logout">
+        <img src="../img/Logout Rounded Left.png" alt="Logout">
+        <a href="../telas/home.html" id="logoutBtn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <!-- Barra Superior -->
+      <header class="header">
+        <h1>Docente</h1>
+      </header>
+
+      <div class="filters">
+        </select>
+        <select id="select-curso">
+            <option value="">CURSO</option>
+        </select>
+        <select id="select-turno">
+            <option value="">TURNO</option>
+        </select>
+        <select id="select-semestre">
+            <option value="">SEMESTRE</option>
+        </select>
+    </div>
+
+    <div class="relatorio">
+      <div class="coluna">
+        <h3>Presença Confirmada</h3>
+        <ul id="confirmada">
+          <li>01674589 - LUIZ AUGUSTO DOS SANTOS</li>
+          <li>01547800 - MARIA DE FÁTIMA RODRIGUES</li>
+          <li>01879212 - PALOMA DOS SANTOS VIEIRA</li>
+          <li>01478596 - JOSÉ FILIPE DE SANTANA</li>
+        </ul>
+        <button class="btn" onclick="gerarPDF('confirmada')">Gerar Relatório</button>
+      </div>
+
+      <div class="divisoria"></div>
+
+      <div class="coluna">
+        <h3>Presença Não Confirmada</h3>
+        <ul id="naoConfirmada">
+          <li>01674589 - LUIZ AUGUSTO DOS SANTOS</li>
+          <li>01547800 - MARIA DE FÁTIMA RODRIGUES</li>
+          <li>01879212 - PALOMA DOS SANTOS VIEIRA</li>
+          <li>01478596 - JOSÉ FILIPE DE SANTANA</li>
+        </ul>
+        <button class="btn" onclick="gerarPDF('naoConfirmada')">Gerar Relatório</button>
+      </div>
+
+      <div class="coluna">
+        <h3>Presença Justificada</h3>
+        <ul id="justificada">
+          <li>01674589 - LUIZ AUGUSTO DOS SANTOS</li>
+          <li>01547800 - MARIA DE FÁTIMA RODRIGUES</li>
+          <li>01879212 - PALOMA DOS SANTOS VIEIRA</li>
+          <li>01478596 - JOSÉ FILIPE DE SANTANA</li>
+        </ul>
+        <button class="btn" onclick="gerarPDF('justificada')">Gerar Relatório</button>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/relatorio.js"></script>
+</body>
+</html>
